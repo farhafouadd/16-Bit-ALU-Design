@@ -32,7 +32,7 @@ module signed_16_bit_alu_tb;
       .Shift_flag(Shift_flag)  // Shift flag output
    );
 
-   // Clock generation with a period of 10 microseconds (5 us high, 5 us low)
+   // Clock generation with a period of 10 microseconds 
    initial clk = 0;
    always #5 clk = ~clk;
 
@@ -113,7 +113,7 @@ module signed_16_bit_alu_tb;
       #10;
       $display("No operation: ALU_OUT = %h", ALU_OUT);
 
-      // End of simulation
+      
       $stop;
    end
 
