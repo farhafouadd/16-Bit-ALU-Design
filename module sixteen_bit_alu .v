@@ -100,14 +100,14 @@ module signed_16_bit_alu (
                     ALU_Result = 16'd0;
                 CMP_flag = 1;
             end
-            // Arithmetic right shift operation (signed shift)
+            // Arithmetic right shift operation 
             4'b1101: begin
                 ALU_Result = A >>> 1; // Arithmetic right shift for signed values
                 Shift_flag = 1;
             end
-            // Arithmetic left shift operation (signed shift)
+            // Arithmetic left shift operation 
             4'b1110: begin
-                ALU_Result = A <<< 1; // Arithmetic left shift for signed values
+                ALU_Result = A <<< 1; // Arithmetic left shift 
                 Shift_flag = 1;
             end
             // Default case to set ALU result to zero
