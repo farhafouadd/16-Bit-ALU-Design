@@ -56,12 +56,12 @@ module signed_16_bit_alu (
                 ALU_Result = A | B;
                 Logic_flag = 1;
             end
-            // Bitwise NAND operation (NOT of AND)
+            // Bitwise NAND operation 
             4'b0110: begin
                 ALU_Result = ~(A & B);
                 Logic_flag = 1;
             end
-            // Bitwise NOR operation (NOT of OR)
+            // Bitwise NOR operation 
             4'b0111: begin
                 ALU_Result = ~(A | B);
                 Logic_flag = 1;
@@ -71,12 +71,12 @@ module signed_16_bit_alu (
                 ALU_Result = A ^ B;
                 Logic_flag = 1;
             end
-            // Bitwise XNOR operation (NOT of XOR)
+            // Bitwise XNOR operation 
             4'b1001: begin
                 ALU_Result = ~(A ^ B);
                 Logic_flag = 1;
             end
-            // Comparison for equality (A == B) using if-else
+            // Comparison for equality (A == B) 
             4'b1010: begin
                 if (A == B)
                     ALU_Result = 16'd1;
@@ -84,7 +84,7 @@ module signed_16_bit_alu (
                     ALU_Result = 16'd0;
                 CMP_flag = 1;
             end
-            // Comparison for greater than (A > B) using if-else
+            // Comparison for greater than (A > B) 
             4'b1011: begin
                 if (A > B)
                     ALU_Result = 16'd2;
@@ -92,7 +92,7 @@ module signed_16_bit_alu (
                     ALU_Result = 16'd0;
                 CMP_flag = 1;
             end
-            // Comparison for less than (A < B) using if-else
+            // Comparison for less than (A < B) 
             4'b1100: begin
                 if (A < B)
                     ALU_Result = 16'd3;
