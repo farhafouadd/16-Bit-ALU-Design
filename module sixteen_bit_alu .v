@@ -102,7 +102,7 @@ module signed_16_bit_alu (
             end
             // Arithmetic right shift operation 
             4'b1101: begin
-                ALU_Result = A >>> 1; // Arithmetic right shift for signed values
+                ALU_Result = A >>> 1; // Arithmetic right shift 
                 Shift_flag = 1;
             end
             // Arithmetic left shift operation 
